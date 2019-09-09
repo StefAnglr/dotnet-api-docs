@@ -2279,7 +2279,7 @@ The `DefaultRequestVersion` property can be changed as long as the <xref:System.
   
  To set an infinite timeout, set the property value to <xref:System.Threading.Timeout.InfiniteTimeSpan>.  
   
- A Domain Name System (DNS) query may take up to 15 seconds to return or time out. If your request contains a host name that requires resolution and you set <xref:System.Net.Http.HttpClient.Timeout%2A> to a value less than 15 seconds, it may take 15 seconds or more before a <xref:System.Net.WebException> is thrown to indicate a timeout on your request.  
+ A Domain Name System (DNS) query may take up to 15 seconds to return or time out. If your request contains a host name that requires resolution and you set <xref:System.Net.Http.HttpClient.Timeout%2A> to a value less than 15 seconds, it may take 15 seconds or more before a <xref:System.OperationCanceledException> is thrown to indicate a timeout on your request.  
   
  The same timeout will apply for all requests using this <xref:System.Net.Http.HttpClient> instance.  You may also set different timeouts for individual requests using a <xref:System.Threading.CancellationTokenSource> on a task. Note that only the shorter of the two timeouts will apply.  
   
